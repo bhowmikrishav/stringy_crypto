@@ -1,0 +1,1 @@
+export const lib = "Hello, this is a sample npm ts module"

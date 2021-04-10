@@ -1,0 +1,29 @@
+{
+  "name": "md_to_html",
+  "version": "0.0.0",
+  "description": "Markdown to HTML",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishavbhowmik/md_to_html.git"
+  },
+  "keywords": [
+    "md",
+    "markdown",
+    "mdtohtml"
+  ],
+  "author": "Rishav Bhowmik",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rishavbhowmik/md_to_html/issues"
+  },
+  "homepage": "https://github.com/rishavbhowmik/md_to_html#readme"
+}
