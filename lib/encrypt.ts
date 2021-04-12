@@ -1,16 +1,14 @@
 import { KeyLike, publicEncrypt, RsaPublicKey } from 'crypto'
-import { serialize } from 'bson'
+import { serialize, Document } from 'bson'
+import { intoChunks } from './intoChunks'
 
-/**
- * 
- * @param publicKey - Public RSA key for encrypting the data
- * @param data - Javascript string, Object
- * @returns 
- */
-export const stringyEncrypt = (publicKey: RsaPublicKey | KeyLike, data: any) => {
-    // Make Encrypted data Buffer using public encryption key
-    const dataBuffer: Buffer = serialize({data})
-    const encryptedDataBuffer: Buffer = publicEncrypt(publicKey, dataBuffer)
-    // Convert encrypted buffer data into hex string array
-    return encryptedDataBuffer.toString('hex')
+export const stringyEncrypt = (publicKey: RsaPublicKey | KeyLike, data: Document, mod_len: number) => {
+    const dataBuffer: Buffer = serialize(data)
+    const chunks = intoChunks(dataBuffer, mod_len)
+    // Make encryptedChunks using public encryption key
+    const encryptedChunkArray = chunks.map(
+        chunk => publicEncrypt(publicKey, chunk).toString('hex')
+    )
+    const encryptedString = encryptedChunkArray.join('_')
+    return encryptedString
 }
