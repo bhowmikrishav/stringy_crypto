@@ -1,10 +1,12 @@
 import { KeyLike, privateDecrypt, RsaPrivateKey } from "crypto";
 import { deserialize, Binary } from 'bson';
 
-type TypeEncryptedCapsule = {
-    chunks: Binary[]
-}
-
+/**
+ * @description decripts encrypted hex string using private RSA key
+ * @param privateKey private RSA key
+ * @param data encrypted hex string with '_' spliters 
+ * @returns decrypted Object
+ */
 export const stringyDecrypt = <T>(privateKey: RsaPrivateKey | KeyLike, data: string) => {
     // convert hex string to Buffer
     const encryptedString = data
