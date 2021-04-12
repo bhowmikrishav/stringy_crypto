@@ -1,4 +1,4 @@
-const { stringyEncrypt, stringyDecrypt } = require('../../dist/index')
+const { stringyEncrypt, stringyDecrypt } = require('stringy_crypto')
 const { readFile } = require('fs/promises')
 const assert = require('assert')
 
