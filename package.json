@@ -1,6 +1,6 @@
 {
   "name": "stringy_crypto",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Encrypt JS Object into hex string, using public key and decrypt back using private key",
   "main": "./dist/index.js",
   "type": "module",
