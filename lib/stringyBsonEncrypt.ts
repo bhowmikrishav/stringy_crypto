@@ -9,7 +9,7 @@ import { intoChunks } from './intoChunks'
  * @param mod_len maximum padding wrt key size
  * @returns encrypted hex string with '_' spliters
  */
-export const stringyEncrypt = (publicKey: RsaPublicKey | KeyLike, data: Document, mod_len: number) => {
+export const stringyBsonEncrypt = (publicKey: RsaPublicKey | KeyLike, data: Document, mod_len: number) => {
     const dataBuffer: Buffer = serialize(data)
     const chunks = intoChunks(dataBuffer, mod_len)
     // Make encryptedChunks using public encryption key

@@ -1,4 +1,5 @@
-import { stringyDecrypt } from "./decrypt";
-import { stringyEncrypt } from "./encrypt";
+import { stringyBsonDecrypt } from "./stringyBsonDecrypt";
+import { stringyBsonEncrypt } from "./stringyBsonEncrypt";
+import { intoChunks } from './intoChunks';
 
-export { stringyDecrypt, stringyEncrypt }
+export { stringyBsonDecrypt, stringyBsonEncrypt, intoChunks }

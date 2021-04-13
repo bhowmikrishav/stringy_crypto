@@ -1,5 +1,5 @@
 import { KeyLike, privateDecrypt, RsaPrivateKey } from "crypto";
-import { deserialize, Binary } from 'bson';
+import { deserialize } from 'bson';
 
 /**
  * @description decripts encrypted hex string using private RSA key
@@ -7,7 +7,7 @@ import { deserialize, Binary } from 'bson';
  * @param data encrypted hex string with '_' spliters 
  * @returns decrypted Object
  */
-export const stringyDecrypt = <T>(privateKey: RsaPrivateKey | KeyLike, data: string) => {
+export const stringyBsonDecrypt = <T>(privateKey: RsaPrivateKey | KeyLike, data: string) => {
     // convert hex string to Buffer
     const encryptedString = data
     const encryptedChunkArray = encryptedString.split('_')
