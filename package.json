@@ -4,8 +4,10 @@
   "description": "## Making Public/Private key pair using `openssl`",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "startDev": "tsc -w",
+    "compile": "tsc",
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/rishavbhowmik/stringy_crypto#readme",
   "devDependencies": {
+    "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.37",
+    "mocha": "^8.3.2",
     "typescript": "^4.2.4"
   },
   "dependencies": {
