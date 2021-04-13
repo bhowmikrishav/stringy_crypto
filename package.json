@@ -1,7 +1,7 @@
 {
   "name": "stringy_crypto",
   "version": "0.0.0",
-  "description": "## Making Public/Private key pair using `openssl`",
+  "description": "Encrypt JS Object into hex string, using public key and decrypt back using private key",
   "main": "./dist/index.js",
   "scripts": {
     "startDev": "tsc -w",
