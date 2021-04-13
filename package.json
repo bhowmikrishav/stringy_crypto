@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "description": "Encrypt JS Object into hex string, using public key and decrypt back using private key",
   "main": "./dist/index.js",
+  "type": "module",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "startDev": "tsc -w",
     "compile": "tsc",
