@@ -5,6 +5,10 @@
   "main": "./dist/index.js",
   "type": "module",
   "types": "./dist/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
     "startDev": "tsc -w",
     "compile": "tsc",
