@@ -19,8 +19,8 @@ describe("Utils", () => {
 })
 describe("BsonDecrypt", () => {
     it("stringyBsonEncrypt & stringyBsonDecrypt", async () => {
-        const privateKey = await readFile('./examples/certificates/enc.key', 'utf-8')
-        const publicKey = await readFile('./examples/certificates/enc.pub', 'utf-8')
+        const privateKey = await readFile(__dirname + '/../examples/certificates/enc.key', 'utf-8')
+        const publicKey = await readFile(__dirname + '/../examples/certificates/enc.pub', 'utf-8')
         const data = { "hello": ["w", "o", "r", ["l", "d", 9, 8, 7, 6, 5, 4, 3, 2, 1]], "year": "2021" }
         const encryptedData = stringyBsonEncrypt(publicKey, data, 10)
         const decryptedData = stringyBsonDecrypt(privateKey, encryptedData)

@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Encrypt JS Object into hex string, using public key and decrypt back using private key",
   "main": "./dist/index.js",
-  "type": "module",
+  "type": "commonjs",
   "types": "./dist/index.d.ts",
   "directories": {
     "lib": "dist",
